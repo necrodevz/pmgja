@@ -1,5 +1,5 @@
 <?php
-App::uses('AppModel', 'Model');
+App::uses('AuthComponent', 'Controller/Component');
 /**
  * User Model
  *
@@ -8,8 +8,15 @@ App::uses('AppModel', 'Model');
  * @property UserDetail $UserDetail
  */
 class User extends AppModel {
+    
+        public function beforeSave($options = array()) {
+            $this->data['User']['password'] = AuthComponent::password(
+            $this->data['User']['password']
+                    );
+            return true;
+        }
 
-/**
+    /**
  * Validation rules
  *
  * @var array

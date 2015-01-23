@@ -32,14 +32,30 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
      public $components = array(
-       /* 'Auth' => array(
+        'Acl',
+         'Auth' => array(
             'authorize' => array(
                 'Actions' => array('actionPath' => 'controllers')
             )
-        ),*/
+        ),
         'Session'
     );
     public $helpers = array('Html', 'Form', 'Session');
+    
+    public function beforeFilter() {
+        $this->Auth->loginAction = array(
+            'controller' => 'users',
+            'action' => 'login'
+        );
+        $this->Auth->loginRedirect = array(
+            'controller' => 'loans',
+            'action' => 'dashboard'
+        );
+        $this->Auth->logoutRedirect = array(
+            'controller' => 'loan',
+            'action' => 'index'
+        );
+    }
 
   
 }

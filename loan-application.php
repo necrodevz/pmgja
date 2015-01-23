@@ -55,9 +55,9 @@ Do the following if you're using your customized build of modernizr (http://www.
                     <a href="_docs/pmg-loan-form.pdf" target="_blank">Loan Application Form</a>
                 </div><!--end of . buttonHolder-->
                 
-                <form method="get" action="_docs/pmg-loan-form.pdf">
+            <!--    <form method="get" action="_docs/pmg-loan-form.pdf">
                 	<button type="submit">Loan Form</button>
-                </form>
+                </form> -->
                 
                 <p>To reduce our customer's efforts, completed forms may be sent to our offices as attachments. The email address is: <a href="">loans.pmg@gmail.com</a></p>
             </div><!--end of . right-->

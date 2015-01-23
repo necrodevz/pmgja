@@ -14,8 +14,14 @@ class UsersController extends AppController {
  * @var array
  */
 	public $components = array('Paginator');
+        
+        public function beforeFilter() {
+            parent::beforeFilter();
+            
+            $this->Auth->allow();
+        }
 
-/**
+        /**
  * index method
  *
  * @return void
@@ -105,4 +111,17 @@ class UsersController extends AppController {
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
+        
+        public function login() {
+            if($this->request->is('post')) {
+                if($this->Auth->login()) {
+                    return $this->redirect($this->Auth->redirectUrl());
+                }
+                $this->Session->setFlash(_('Your username or password was incorrect'));
+            }
+        }
+        
+        public function logout() {
+            //placeholder for logout script
+        }
 }

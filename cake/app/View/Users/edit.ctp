@@ -3,6 +3,7 @@
 	<fieldset>
 		<legend><?php echo __('Edit User'); ?></legend>
 	<?php
+                echo $this->Form->input('username');
 		echo $this->Form->input('id');
 		echo $this->Form->input('fname');
 		echo $this->Form->input('lname');
@@ -10,7 +11,7 @@
 		echo $this->Form->input('password');
 		echo $this->Form->input('last_login');
 		echo $this->Form->input('group_id');
-		echo $this->Form->input('username');
+		
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
