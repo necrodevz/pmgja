@@ -105,7 +105,6 @@ Do the following if you're using your customized build of modernizr (http://www.
         </div><!--end of .col-->
         
                 
-    </div><!--end of .holder-->
   </div><!--end of #topBanner-->
   
   <div id="mainContent">

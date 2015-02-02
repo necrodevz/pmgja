@@ -623,3 +623,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
             float: left; 
             //width: 100%;
         }
+
+        body {
+            //width: 900px;
+        }
+        .gridContainer, .holder, .clearfix, #bottomBanner,footer {
+            width: 900px;
+        }
+        
+        #top .holder h1 {
+            width: 70%
+        }

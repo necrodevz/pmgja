@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group name="sites"/>
+        <group name="sites">
+            <file>file:/var/www/html/sites/projects/pmg/_includes/slides/slide2.php</file>
+            <file>file:/var/www/html/sites/projects/pmg/loan-application.php</file>
+            <file>file:/var/www/html/sites/projects/pmg/main.css</file>
+            <file>file:/var/www/html/sites/projects/pmg/index.php</file>
+            <file>file:/var/www/html/sites/projects/pmg/_includes/slider.js</file>
+            <file>file:/var/www/html/sites/projects/pmg/_includes/footer.php</file>
+            <file>file:/var/www/html/sites/projects/pmg/_includes/slides/slide3.php</file>
+            <file>file:/var/www/html/sites/projects/pmg/_includes/slides/slide1.php</file>
+        </group>
     </open-files>
 </project-private>
