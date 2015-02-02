@@ -125,6 +125,7 @@ Do the following if you're using your customized build of modernizr (http://www.
   </div><!--end of #bottomBanner-->
   
   <?php include("_includes/footer.php"); ?> 
+  
 
 </div><!--end of .gridContainer -->
 

@@ -83,6 +83,7 @@ nav {
 	margin-left: 0;
 	width: 100%;
 	display: block;
+        padding: 0;
 }
 footer {
 	clear: both;
@@ -326,7 +327,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9200', end
 	background:#ff7c00; color:white;
 }
 #topBanner .col {
-	float:left; width:350px; padding:25px 0;
+	float:left; width:250px; padding:25px 0;
 }
 #topBanner .center {
 	margin:0 50px;
@@ -356,25 +357,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9200', end
 	font-size:20px; margin: 0 0 50px 0; padding-top:40px;
 }
 .circleImg {
-	margin-right:30px; -webkit-filter: drop-shadow(0px 0px 2px #222); filter: drop-shadow(0px 0px 2px #222); float:left; margin-left:50px;
+	margin-right:30px; width: 10%; -webkit-filter: drop-shadow(0px 0px 2px #222); filter: drop-shadow(0px 0px 2px #222); float:left; margin-left:50px;
 }
 #mainContent .circle p {
 	float:left; text-align:left; width:800px; line-height:30px; margin-bottom:20px;
 }
 #bottomBanner {
-	padding:40px 0px; background:url(_images/blue-bkg.jpg); text-align:center; text-transform:uppercase;
+	padding:00px 0px; background:url(_images/blue-bkg.jpg); text-align:center; text-transform:uppercase;
 }
 #bottomBanner p {
-	color:#175268; font-size:30px;
+	color:#175268; font-size:20px;
 }
 #bottomBanner b {
 	padding:40px 0px;
 }
 #bottomBanner a, #bottomBanner b {
-	color:white; font-size:60px; text-decoration:none;
+	color:white; font-size:40px; text-decoration:none;
 }
 footer {
-	background:black; color:white; padding:40px 0px;
+	background:black; color:white; padding:10px 0px;
 }
 footer .left {
 	float:left; width:600px;
@@ -616,7 +617,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
     .banner li { 
         list-style: none; 
-        height: 365px;
+        height: 230px;
 
     }
         .banner ul li { 
@@ -633,4 +634,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
         
         #top .holder h1 {
             width: 70%
+        }
+        
+        #mainContent .holder {
+            padding: 0;
         }

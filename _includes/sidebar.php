@@ -1,4 +1,5 @@
-		<div class="sidebar">
+<div class="clearfix"></div>		
+<div class="sidebar">
         
         	<div class="side">
             	<h3>What you will need</h3>
