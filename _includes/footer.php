@@ -18,7 +18,7 @@
         <div class="right">
         
         	<p>FOLLOW US: <a href="https://www.facebook.com/ProgressiveMG" target="_blank"><img src="_images/facebook-icon.png" /></a></p>
-        	<p>&copy; 2014 PMG</p>
+        	<p>&copy; 2015 PMG</p>
             
         </div><!--eend of .right-->
     	

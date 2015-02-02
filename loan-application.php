@@ -7,6 +7,7 @@
 <!--<![endif]-->
 <head profile="http://www.w3.org/2005/10/profile">
 <link rel="icon" type="image/png" href="/favicon.ico" />
+<title>Progressive Microfinace Group| Peer to Peer Loan Company Jamaica</title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
