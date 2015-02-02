@@ -18,6 +18,8 @@
 <link href="boilerplate.css" rel="stylesheet" type="text/css">
 <link href="main.css" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="_includes/owl/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="_includes/owl/assets/owl.theme.default.css">
 <!-- 
 To learn more about the conditional comments around the html tags at the top of the file:
 paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
@@ -31,16 +33,30 @@ Do the following if you're using your customized build of modernizr (http://www.
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="respond.min.js"></script>
+<script src="//unslider.com/unslider.min.js"></script>
 </head>
 <body>
 <div class="gridContainer clearfix">
 
  <?php include("_includes/header.php"); ?> 
-  
+    
+    <div class="banner">
+            <ul>
+                <li> <?php include '_includes/slides/slide1.php'; ?> </li>
+                <li> <?php include '_includes/slides/slide2.php'; ?> </li>
+                <li> <?php include '_includes/slides/slide3.php'; ?> </li>
+            </ul>            
+        </div><!--end of .banner-->
+        <div class="clearfix"></div> 
+    
   <div id="indexTop">
+      
   
   	<div class="holder">
+          	<div class="holder">
+               
     
     	<div class="left">
             <img src="_images/woman.png" class="woman"/>
@@ -50,26 +66,29 @@ Do the following if you're using your customized build of modernizr (http://www.
         	<h4 class="top">Money can be in your</h4>
             <h4>account the next day</h4>       
         </div><!--end of .left-->
-
-        <form id="homeForm">
+            
+        </div><!--end of .cicrlces-->
+        
+    <!--    <form id="homeForm">
         	<h3>Apply Now</h3>
-            <label for="fName"><img src="_images/email-icon.png" alt="Email Icon"/></label>
+            <label for="fName"><img src="_images/name-icon.png" alt="Name Icon"/></label>
             <input type="text" name="fName" id="fName" placeholder="Please enter your name"/>
             
-            <label for="email"><img src="_images/name-icon.png" alt="Name Icon"/></label>
+            <label for="email"><img src="_images/email-icon.png" alt="Email Icon"/></label>
             <input type="email" name="email" id="email" placeholder="Please enter your email"/>
             <a href="loan-application.php">Get Started Now</a>
-            <!--<input type="submit" value="Get Started Now!" />-->
-        </form>
+            <!--<input type="submit" value="Get Started Now!" />
+        </form> -->
         
         <div class="clearfix"></div>
     </div><!--end of .holder-->
     
   </div><!--end of #indexTop-->
+  <div class="clearfix"></div>
   
   <div id="topBanner">
-  	<div class="holder">
-    
+       
+        
     	<div class="col">
         	<h5>Flexible Terms</h5>
             <p>Borrow from $10,000 to $150,000.</p>
@@ -92,30 +111,7 @@ Do the following if you're using your customized build of modernizr (http://www.
   <div id="mainContent">
   	<div class="holder">
     
-    	<h4>SIMPLIFY FOR YOUR LIFE WITH A PMG LOAN, APPROVAL AS FAST AS 24 HOURS</h4>
-        <p>Whether your plans are big or small, our low rate Personal Loan could help you reach your goals.</p>
-		<p>To ensure you benefit from this offer please apply through this page or call us using the details below.</p>
-        
-        <div class="circles">
-        	<div class="circle">
-            	<h3>Who qualifies for a loan from Progressive Micro-finance Group?</h3>
-                <img class="circleImg" src="_images/who-qualifies.png" alt="Who qualifies for a loan"/>
-                <p>Anyone who is gainfully employed and their company is willing to facilitate a salary deduction is elgible to receive a laon from the Progressive Microfinance Groupd Ltd.</p>
-                <a href="loan-application.php"><img src="_images/apply-now.png" alt="Apply for a PMG loan"/></a>
-                <div class="clearfix"></div>
-            </div><!--end of .circle-->
-            
-        	<div class="circle">
-            	<h3>We have Loan Packages for Every Sector</h3>
-                <img class="circleImg" src="_images/who-icon.png" alt="Who qualifies for a loan"/>
-                <p>We have special loan packages for Government Sector, Call Centre Employees and Private Sector employees. For further information please contact us at: <a href="tel:+8766192965">619-2965</a> or <a href="tel:+8768187645">818-7645</a>.</p>
-                <a href="loan-application.php"><img src="_images/apply-now.png" alt="Apply for a PMG loan"/></a>
-                <div class="clearfix"></div>
-            </div><!--end of .circle-->
-            
-        </div><!--end of .cicrlces-->
-        
-        	<h5>Important Information</h5>
+            <h5>Important Information</h5>
             <p style="text-align:left;">Applicants must be residents of Jamaica and should be at least 18 years of age. Repayments are made by Salary Deductions only. Interest rate varies based on credit worthiness of the applicant.  We reserve the right to refuse any application.</p>
         
     </div><!--end of . holder-->
@@ -134,5 +130,8 @@ Do the following if you're using your customized build of modernizr (http://www.
 </div><!--end of .gridContainer -->
 
 	<?php include("_includes/analyticstracking.php"); ?>
+
+<script src="_includes/slider.js"></script>
+
 </body>
 </html>

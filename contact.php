@@ -167,7 +167,7 @@ Do the following if you're using your customized build of modernizr (http://www.
     </div><!--end of .holder-->
   </div><!--end of #bottomBanner-->
   
-  <?php include("_includes/header.php"); ?> 
+  <?php include("_includes/footer.php"); ?> 
 </div><!--end of .gridContainer -->
 
 	<?php include("_includes/analyticstracking.php"); ?>
