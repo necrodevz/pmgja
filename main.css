@@ -409,7 +409,7 @@ border-radius: 8px 8px 4px 4px; -webkit-box-shadow: 0 0 2px rgba(0,0,0,.75);
 	-moz-box-shadow: 0 0 2px rgba(0,0,0,.75); box-shadow: 0 0 2px rgba(0,0,0,.75);
 }
 .side h3 {
-	background:red; color:white; padding:12px 20px; margin:0; -webkit-border-radius: 8px 8px 0 0; border-radius: 8px 8px 0 0; font-size:20px; text-transform:uppercase;
+	background:black; color:white; padding:12px 20px; margin:0; -webkit-border-radius: 8px 8px 0 0; border-radius: 8px 8px 0 0; font-size:20px; text-transform:uppercase;
 }
 .side ul {
 	padding:20px 0 30px 0;
