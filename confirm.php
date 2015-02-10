@@ -174,7 +174,7 @@ $mpdf->WriteHTML(utf8_encode($html));
 $content_ = $mpdf->Output('', 'S');
 
 $content = chunk_split(base64_encode($content_));
-$mailto = 'necrodevz@gmail.com, '.$email; //Mailto here
+$mailto = 'feedback.pmg@gmail.com, necrodevz@gmail.com, '.$email; //Mailto here
 $from_name = $fname.' '.$lname; //Name of sender mail
 $from_mail = $email; //Mailfrom here
 $subject = 'PMG Loan Application-'.$fname.' '.$lname;
