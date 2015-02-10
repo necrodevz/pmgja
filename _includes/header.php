@@ -50,7 +50,7 @@
     
     <nav>
     	<div class="holder">
-            <ul class="list-inline">
+            <ul class="list-inline" style="margin-left:10px;">
                 <li><a href="index.php">home</a></li>
                 <li><a href="why-PMG.php">why a pmg loan</a></li>
                 <li><a href="become-lender.php">become a lender</a></li>

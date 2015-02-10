@@ -22,48 +22,9 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 	endif;			
 
 endif;
-?>
 
-<!doctype html>
-<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
-<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
-<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="">
-<!--<![endif]-->
-<head profile="http://www.w3.org/2005/10/profile">
-<link rel="icon" type="image/png" href="/favicon.ico" />
+include("_includes/header.php"); ?> 
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact Progressive Microfinance Group on getting a loan</title>
-
-<link href="boilerplate.css" rel="stylesheet" type="text/css">
-<link href="main.css" rel="stylesheet" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-<!-- 
-To learn more about the conditional comments around the html tags at the top of the file:
-paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
-
-Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
-* insert the link to your js here
-* remove the link below to the html5shiv
-* add the "no-js" class to the html tags at the top
-* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
--->
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="respond.min.js"></script>
-</head>
-<body>
-<div class="gridContainer clearfix">
-
-  <?php include("_includes/header.php"); ?> 
-
-
-  
   <div id="otherContent">
   	<div class="holder">
 
@@ -129,7 +90,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 
         </div><!--end of .twoCol-->
         
-            <div class="sidebar">
+            <!--<div class="sidebar">
             
                 <div class="side">
                     <h3>Apply for a loan Below</h3>
@@ -143,7 +104,7 @@ Do the following if you're using your customized build of modernizr (http://www.
                         <a href="loan-application.php">Get Started Now</a>
             			<!--<input type="submit" value="Get Started Now!" />-->                    
                     </form>
-                </div><!--end of .side-->
+                </div><!--end of .side--
                 
                 <div class="side phone">
                     <h3>Need More Help? Call Us</h3>
@@ -152,7 +113,7 @@ Do the following if you're using your customized build of modernizr (http://www.
                         <li><a href="tel:18766192965">(876) 619-2965</a></li>
                         <li><a href="tel:18766316203">(876) 631-6203</a></li>
                     </ul>
-                </div><!--end of .side-->
+                </div><!--end of .side--
             
             </div><!--end of .sidebar-->
             <div class="clearfix"></div>        
@@ -166,12 +127,9 @@ Do the following if you're using your customized build of modernizr (http://www.
         <p>MON-FRI 09:00am to 05:00pm</p>
     </div><!--end of .holder-->
   </div><!--end of #bottomBanner-->
-  
+      <script>$(document).ready (function(){$("#complaint").validate();});</script> 
+      	<?php include("_includes/analyticstracking.php"); ?>
   <?php include("_includes/footer.php"); ?> 
-</div><!--end of .gridContainer -->
 
-	<?php include("_includes/analyticstracking.php"); ?>
+
     
-    <script>$(document).ready (function(){$("#complaint").validate();});</script> 
-</body>
-</html>
