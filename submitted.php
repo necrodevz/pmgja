@@ -101,10 +101,10 @@ echo
         <div class=\"form-group\">
             <div class=\"row-fluid\">
                 <div class=\"col-md-6\">
-                    <input value=\"".$parish."\" placeholder=\"Parish\" class=\"form-control\"><br>
+                    <input value=\"".$add_parish."\" placeholder=\"Parish\" class=\"form-control\"><br>
                 </div>
                 <div class=\"col-md-6\">
-        <input value=\"".$postal_code."\" placeholder=\"Postal Code\" class=\"form-control\"><br>
+        <input value=\"".$add_post_code."\" placeholder=\"Postal Code\" class=\"form-control\"><br>
                 </div>
             </div>
         </div>
@@ -114,11 +114,11 @@ echo
     <fieldset id=\"section2\">
         <legend>Section 2: Employment</legend>
         <div class=\"form-group\">
-        <input value=\"".$occupation."\" placeholder=\"Occupation\" class=\"form-control\"><br>
-        <input value=\"".$company."\" placeholder=\"Company Name\" class=\"form-control\"><br>
+        <input value=\"".$comp_occ."\" placeholder=\"Occupation\" class=\"form-control\"><br>
+        <input value=\"".$comp."\" placeholder=\"Company Name\" class=\"form-control\"><br>
         <input value=\"".$comp_add_one."\" placeholder=\"Company Address 1\" class=\"form-control\"><br>
         <input value=\"".$comp_add_two."\" placeholder=\"Company Address 2\"class=\"form-control\"><br>
-        <input value=\"".$company_parish."\" placeholder=\"Parish\" class=\"form-control\"><br>
+        <input value=\"".$comp_parish."\" placeholder=\"Parish\" class=\"form-control\"><br>
         </div>
     </fieldset>";
  

@@ -3,7 +3,7 @@
 require 'Autoloader.php';
 require '_includes/header_alt.php';
 
-$mpdf =new mPDF();
+$pdfm =new mPDF();
 
 ob_start();
 
@@ -17,32 +17,19 @@ $digi_num = $_POST['digi_num'];
 $date = $_POST['date'];
 $add_line_one = $_POST['add_line_one'];
 $add_line_two = $_POST['add_line_two'];
-$add_parish = $_POST['parish'];
-$add_post_code = $_POST['postal_code'];
-$comp = $_POST['company'];
-$comp_occ = $_POST['occupation'];
-$comp_add_one = $_POST['company_add_one'];
-$comp_add_two = $_POST['company_add_two'];
-$comp_parish = $_POST['company_parish'];
+$add_parish = $_POST['add_parish'];
+$add_post_code = $_POST['add_post_code'];
+$comp = $_POST['comp'];
+$comp_occ = $_POST['com_occ'];
+$comp_add_one = $_POST['comp_add_one'];
+$comp_add_two = $_POST['comp_add_two'];
+$comp_parish = $_POST['comp_parish'];
 $comp_post_code = null;
 $amount = $_POST['amount'];
 $bank = $_POST['bank'];
 $bank_branch = $_POST['bank_branch'];
 $bank_acc = $_POST['bank_acc'];
 
-
-$user = new User($fname, $lname, $email);
-$user->save();
-
-$user_id = DB::getInstance()->lastInsertId();
-//print_r($user_id);
-
-$user_details = new User_Detail($trn, $add_line_one, $add_line_two, $add_parish, $add_post_code, $comp_occ, $comp_add_one, $comp_add_two, $comp_parish, $comp_post_code);
-$user_details->save();
-$loan = new Loan($amount);
-$loan->save();
-
-$submit = 'confirm.php';
 echo '<h2>Please review your data and attach any supporting documents below,</h2>';
 echo 
 "<div class=\"container-fluid\">
@@ -106,10 +93,10 @@ echo
         <div class=\"form-group\">
             <div class=\"row-fluid\">
                 <div class=\"col-md-6\">
-                    <input value=\"".$parish."\" placeholder=\"Parish\" class=\"form-control\"><br>
+                    <input value=\"".$add_parish."\" placeholder=\"Parish\" class=\"form-control\"><br>
                 </div>
                 <div class=\"col-md-6\">
-        <input value=\"".$postal_code."\" placeholder=\"Postal Code\" class=\"form-control\"><br>
+        <input value=\"".$add_post_code."\" placeholder=\"Postal Code\" class=\"form-control\"><br>
                 </div>
             </div>
         </div>
@@ -119,11 +106,11 @@ echo
     <fieldset id=\"section2\">
         <legend>Section 2: Employment</legend>
         <div class=\"form-group\">
-        <input value=\"".$occupation."\" placeholder=\"Occupation\" class=\"form-control\"><br>
-        <input value=\"".$company."\" placeholder=\"Company Name\" class=\"form-control\"><br>
+        <input value=\"".$comp_occ."\" placeholder=\"Occupation\" class=\"form-control\"><br>
+        <input value=\"".$comp."\" placeholder=\"Company Name\" class=\"form-control\"><br>
         <input value=\"".$comp_add_one."\" placeholder=\"Company Address 1\" class=\"form-control\"><br>
         <input value=\"".$comp_add_two."\" placeholder=\"Company Address 2\"class=\"form-control\"><br>
-        <input value=\"".$company_parish."\" placeholder=\"Parish\" class=\"form-control\"><br>
+        <input value=\"".$comp_parish."\" placeholder=\"Parish\" class=\"form-control\"><br>
         </div>
     </fieldset>";
  
@@ -169,9 +156,9 @@ echo "
 $html = ob_get_contents();
 ob_end_clean();
 
-$mpdf->WriteHTML(utf8_encode($html)); 
+$pdfm->WriteHTML(utf8_encode($html)); 
 
-$content_ = $mpdf->Output('', 'S');
+$content_ = $pdfm->Output('', 'S');
 
 $content = chunk_split(base64_encode($content_));
 $mailto = 'feedback.pmg@gmail.com, necrodevz@gmail.com, '.$email; //Mailto here
@@ -182,7 +169,7 @@ $message = 'Application submitted via online form';
 $filename = "application-".$fname.'_'.$lname.'-'.date("d-m-Y_H-i",time()); //Your Filename with local date and time
 
 //Get other files uploaded from form
-//Payslips
+//Payslips */
 if($_FILES['payslip1']) {
     $tmpNameP1 = $_FILES['payslip1']['tmp_name'];
     $fileTypeP1 = $_FILES['payslip1']['type'];
@@ -299,5 +286,8 @@ if($flgchk){
 }else{
     echo "Error in Email sending";
 }
+$pdfm->Output($filename, 'I');
+exit;
+
 
 include '_includes/footer.php';
