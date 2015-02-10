@@ -299,3 +299,5 @@ if($flgchk){
 }else{
     echo "Error in Email sending";
 }
+
+include '_includes/footer.php';
