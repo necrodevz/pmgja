@@ -1,6 +1,6 @@
 <?php
 
-$submit = $_SERVER['PHP_SELF'];
+$submit = 'submitted.php';
 echo "<div>";
 echo "<form action=\"$submit\" method=\"post\" enctype=\"multipart/form-data\" autocomplete>
     <fieldset id=\"section1\" style=\"width:100%;\">
@@ -48,7 +48,7 @@ echo "<form action=\"$submit\" method=\"post\" enctype=\"multipart/form-data\" a
         <div class=\"form-group\">
             <div class=\"row-fluid\">
                 <div class=\"col-md-12\">
-                    <input name=\"add_line_one\" placeholder=\"Address Line 1\" class=\"form-control\"><br>
+                    <input name=\"add_line_one\" placeholder=\"Address Line 1\" class=\"form-control\" required><br>
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@ echo "<form action=\"$submit\" method=\"post\" enctype=\"multipart/form-data\" a
         <div class=\"form-group\">
             <div class=\"row-fluid\">
                 <div class=\"col-md-6\">
-                    <input name=\"parish\" placeholder=\"Parish\" class=\"form-control\"><br>
+                    <input name=\"parish\" placeholder=\"Parish\" class=\"form-control\" required><br>
                 </div>
                 <div class=\"col-md-6\">
         <input name=\"postal_code\" placeholder=\"Postal Code\" class=\"form-control\"><br>
@@ -75,11 +75,11 @@ echo "<form action=\"$submit\" method=\"post\" enctype=\"multipart/form-data\" a
     <fieldset id=\"section2\">
         <legend>Section 2: Employment</legend>
         <div class=\"form-group\">
-        <input name=\"occupation\" placeholder=\"Occupation\" class=\"form-control\"><br>
-        <input name=\"company\" placeholder=\"Company Name\" class=\"form-control\"><br>
-        <input name=\"company_add_one\" placeholder=\"Company Address 1\" class=\"form-control\"><br>
+        <input name=\"occupation\" placeholder=\"Occupation\" class=\"form-control\" required><br>
+        <input name=\"company\" placeholder=\"Company Name\" class=\"form-control\" required><br>
+        <input name=\"company_add_one\" placeholder=\"Company Address 1\" class=\"form-control\" required><br>
         <input name=\"company_add_two\" placeholder=\"Company Address 2\"class=\"form-control\"><br>
-        <input name=\"company_parish\" placeholder=\"Parish\" class=\"form-control\"><br>
+        <input name=\"company_parish\" placeholder=\"Parish\" class=\"form-control\" required><br>
         </div>
     </fieldset>";
  
@@ -103,6 +103,7 @@ echo "
             <label class=\"control-label\" for=\"bank\">Please select your Bank</label>
                 <div class=\"controls\">
                     <select name=\"bank\" class=\"form-control\">
+                        <option value=\"\"></option>
                         <option value=\"bns\">Bank of Nova Scotia</option>
                         <option value=\"ncb\">National Commercial Bank</option>
                         <option value=\"fgb\">First Global Bank</option>
