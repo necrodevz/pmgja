@@ -102,7 +102,7 @@ include("_includes/header.php"); ?>
                         <label for="email"><img src="_images/name-icon.png" alt="Name Icon"/></label>
                         <input type="email" name="email" id="email" placeholder="Please enter your email"/>
                         <a href="loan-application.php">Get Started Now</a>
-            			<!--<input type="submit" value="Get Started Now!" />-->                    
+            			<!--<input type="submit" value="Get Started Now!" />--                   
                     </form>
                 </div><!--end of .side--
                 
