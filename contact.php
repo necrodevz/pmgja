@@ -29,7 +29,7 @@ include("_includes/header.php"); ?>
   	<div class="holder">
 
 		<div class="twoCol">
-        	<h2>There is no such thing as a dumb question. Drop us a line or give us a call.</h2>
+        	<h3>There is no such thing as a dumb question. Drop us a line or give us a call.</h3>
             
             <iframe width="580" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=205270552970553628214.0004ea6762866fb3315ed&amp;ie=UTF8&amp;ll=18.008641,-76.749158&amp;spn=0,0&amp;t=m&amp;iwloc=0004ea67661c53b1c9675&amp;output=embed"></iframe>
             
