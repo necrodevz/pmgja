@@ -37,7 +37,7 @@ $user_details->save();
 $loan = new Loan($amount);
 $loan->save();
 
-$submit = 'success.php';
+$submit = 'confirm.php';
 echo '<h2>Please review your data and attach any supporting documents below,</h2>';
 echo 
 "<div class=\"container-fluid\">
@@ -180,3 +180,5 @@ echo "
 <input type=\"submit\" value=\"Submit and Upload\" class=\"btn btn-danger\">
     </form>
 </div>";
+
+include '_includes/footer.php';
