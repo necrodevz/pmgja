@@ -26,3 +26,6 @@
     </div><!--end of .holder-->
     
   </footer><!--end of footer-->
+  </div>
+  </body>
+  </html>

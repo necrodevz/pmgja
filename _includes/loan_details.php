@@ -1,68 +1,143 @@
 <?php
 
 $submit = $_SERVER['PHP_SELF'];
-$tengu = var_dump($submit);
-if(!isset($_POST['trn'])) {
-echo
-"<form action=\"$submit\" id=\"section1\" method=\"post\" autocomplete >
-    
-            <h5>Section 1: Personal Information</h5>
-        
-        <input name=\"fname\" placeholder=\"First Name\" required><br>
-        <input name=\"lname\" placeholder=\"Surname\" required><br>
-        <input name=\"email\" placeholder=\"Email Address\" type=\"email\" required><br>
-        <input name=\"land_num\" placeholder=\"Landline\" class=\"tel\"><br>
-        <input name=\"lime_num\" placeholder=\"Lime Number\" class=\"tel\"><br>
-        <input name=\"digi_num\" placeholder=\"Digicel Number\" class=\"tel\"><br>
-        <input name=\"trn\" placeholder=\"TRN Number\" class=\"trn\" required><br>
-        <input name=\"date\" id=\"tDate\" readonly=\"readonly\"><br>
-        <input name=\"add_line_one\" placeholder=\"Address Line 1\"><br>
-        <input name=\"add_line_two\" placeholder=\"Address Line 2\"><br>
-        <input name=\"parish\" placeholder=\"Parish\"><br>
-        <input name\"postal_code\" placeholder=\"Postal Code\"><br>
-    <input type=\"submit\" value=\"Next Section\"><br>
-</form>
-        <pre>";
+echo "<div>";
+echo "<form action=\"$submit\" method=\"post\" enctype=\"multipart/form-data\" autocomplete>
+    <fieldset id=\"section1\" style=\"width:100%;\">
+        <legend>Section 1: Personal Information</legend>
+        <div class=\"row-fluid\">
+            <div class=\"form-group\">
+                <div class=\"col-md-6\">
+                    <input name=\"fname\" placeholder=\"First Name\" class=\"form-control\" required><br>
+                </div>
+                <div class=\"col-md-6\">
+                    <input name=\"lname\" placeholder=\"Surname\" class=\"form-control\"required><br>
+                </div>
+            </div>
+        </div>
+        <div class=\"form-group\">
+            <div class=\"row-fluid\">
+                <div class=\"col-md-6\">
+                    <input name=\"email\" placeholder=\"Email Address\" type=\"email\" class=\"form-control\" required><br>
+                </div>
+                <div class=\"col-md-6\">
+                    <input name=\"land_num\" placeholder=\"Landline\" class=\"tel form-control\"><br>
+                </div>
+            </div>
+        </div>
+        <div class=\"form-group\">
+            <div class=\"row-fluid\">
+                <div class=\"col-md-6\">
+                    <input name=\"lime_num\" placeholder=\"Lime Number\" class=\"tel form-control\"><br>
+                </div>
+                <div class=\"col-md-6\">
+                    <input name=\"digi_num\" placeholder=\"Digicel Number\" class=\"tel form-control\"><br>
+                </div>
+            </div>
+        </div>
+        <div class=\"form-group\">
+            <div class=\"row-fluid\">
+                <div class=\"col-md-6\">
+                    <input name=\"trn\" placeholder=\"TRN Number\" class=\"trn form-control\" required><br>
+                </div>
+                <div class=\"col-md-6\">
+                    <input name=\"date\" id=\"tDate\" class=\"form-control\" readonly=\"readonly\"><br>
+                </div>
+            </div>
+        </div>
+        <div class=\"form-group\">
+            <div class=\"row-fluid\">
+                <div class=\"col-md-12\">
+                    <input name=\"add_line_one\" placeholder=\"Address Line 1\" class=\"form-control\"><br>
+                </div>
+            </div>
+        </div>
+        <div class=\"form-group\">
+            <div class=\"row-fluid\">
+                <div class=\"col-md-12\">
+                    <input name=\"add_line_two\" placeholder=\"Address Line 2\" class=\"form-control\"><br>
+                </div>
+            </div>
+        </div>
+        <div class=\"form-group\">
+            <div class=\"row-fluid\">
+                <div class=\"col-md-6\">
+                    <input name=\"parish\" placeholder=\"Parish\" class=\"form-control\"><br>
+                </div>
+                <div class=\"col-md-6\">
+        <input name=\"postal_code\" placeholder=\"Postal Code\" class=\"form-control\"><br>
+                </div>
+            </div>
+        </div>
+    </fieldset>";
 
-} elseif ((!$_POST['employed']=FALSE&&!isset($_POST['company']))|(!isset($_POST['employed']))) {
  echo "
-<form action=\"$submit\" id=\"section2\" method=\"post\" autocomplete>
-        <h5>Section 2: Employment</h5>";
-    if(!isset($_POST['employed'])) {
-     echo "
-    <label for=\"employed\">Are you currently employed?</label><br />
-    <input name=\"employed\" type=\"radio\" value=\"Yes\" checked>Yes<br>
-    <input name=\"employed\" type=\"radio\" value=\"No\">No
-    <input type=\"submit\" value=\"Continue\">";
-    }  elseif($_POST['employed']= TRUE) {
-        echo "
-        <input name=\"occupation\" placeholder=\"Occupation\"><br>
-        <input name=\"company\" placeholder=\"Company Name\"><br>
-        <input name=\"company_add_one\" placeholder=\"Company Address 1\"><br>
-        <input name=\"company_add_two\" placeholder=\"Company Address 2\"><br>
-        <input name=\"company_parish\" placeholder=\"Parish\"><br>
-        <input type=\"submit\" value=\"Next Section\">";
-    };
-echo "   
-</form>";
-}  elseif (!isset($_POST['amount'])) {
-    echo "<h5>Section 3: Loan Information</h5>
-    
-    <form action=\"$submit\" id=\"section3\" method=\"post\" autocomplete>
-        <label for=\"amount\">How much would you like to borrow?</label><input name=\"amount\" class=\"cur\" placeholder=\"$$$\">
-        
-    </form>";
-        
-        
-};
+    <fieldset id=\"section2\">
+        <legend>Section 2: Employment</legend>
+        <div class=\"form-group\">
+        <input name=\"occupation\" placeholder=\"Occupation\" class=\"form-control\"><br>
+        <input name=\"company\" placeholder=\"Company Name\" class=\"form-control\"><br>
+        <input name=\"company_add_one\" placeholder=\"Company Address 1\" class=\"form-control\"><br>
+        <input name=\"company_add_two\" placeholder=\"Company Address 2\"class=\"form-control\"><br>
+        <input name=\"company_parish\" placeholder=\"Parish\" class=\"form-control\"><br>
+        </div>
+    </fieldset>";
+ 
+echo "
+    <fieldset id=\"section3\">
+        <legend>Section 3: Loan Information</legend>
+        <div class=\"row\">
+        <div class=\"col-md-3\">
+        <div class=\"form-group\">
+        <label for=\"amount\">How much would you like to borrow?</label>
+         <div class=\"input-group\">
+            <div class=\"input-group-addon\">$</div>
+                <input name=\"amount\" class=\"cur\" placeholder=\"$$$\" class=\"form-control\">
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class=\"row\">
+        <div class=\"col-md-6\">
+        <div class=\"control-group\">
+            <label class=\"control-label\" for=\"bank\">Please select your Bank</label>
+                <div class=\"controls\">
+                    <select name=\"bank\" class=\"form-control\">
+                        <option value=\"bns\">Bank of Nova Scotia</option>
+                        <option value=\"ncb\">National Commercial Bank</option>
+                        <option value=\"fgb\">First Global Bank</option>
+                    </select>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class=\"control-group\">
+            <label class=\"control-label\" for=\"bank_branch\">Please type the branch where your account was opened.</label>
+                <div class=\"controls\">
+                    <input id=\"bank_branch\" name=\"bank_branch\" placeholder=\"Bank Branch\" class=\"form-control\" type=\"text\">
+                    <p class=\"help-block\">The location of the branch where your account was opened. </p>
+                </div>
+            </div>
 
-echo $tengu; ?>
-<?php echo        "</pre>
+            <div class=\"control-group\">
+                <label class=\"control-label\" for=\"bank_acc\">Enter your account number</label>
+                    <div class=\"controls\">
+                        <input id=\"bank_acc\" name=\"bank_acc\" placeholder=\"Account Number\" class=\"form-control\" type=\"text\"><br>
+                    </div>
+            </div>
+    </fieldset>";
+
+echo "
+        <input type=\"submit\" value=\"Submit\" class=\"btn btn-danger\">
+</form>
+</div>
+<br>";
+
+echo        "
  <script type=\"text/javascript\">
     $(document).ready(function() {
        $('.tel').mask('(000)000-0000'); 
        $('.trn').mask('000-000-000');
        $('.cur').mask('#,##0.00', {reverse:true});
     });
-</script>
-</html>";
+</script>";
