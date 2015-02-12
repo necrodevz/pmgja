@@ -1,7 +1,7 @@
 <?php
 
 $submit = 'submitted.php';
-echo "<div style=\"margin-top:200px;\">";
+echo "<div class=\"container-fluid\">";
 echo "<form action=\"$submit\" method=\"post\" enctype=\"multipart/form-data\" autocomplete>
     <fieldset id=\"section1\" style=\"width:100%;\">
         <legend>Section 1: Personal Information</legend>

@@ -285,9 +285,25 @@ $header2 .= "$boundary\r\n";
 $flgchk = mail($mailto,$subject,$header,$header2, "-r".$from_mail);
  
 if($flgchk){
-   echo "A email has been sent to: $to";
+   require '_includes/header.php'; ?>
+<div class="container-fluid">
+<div class="alert-success">
+    <h3>Your Application has been submitted!</h3>
+    <br>
+    <blockquote class="panel">
+    <p>Your loan application has been submitted and a copy sent to the email address you provided.</p>
+    <p>You will be contacted within 72 business hours.</p>
+    </blockquote>
+</div>
+</div>
+   
+   <?php
+   require '_includes/footer.php';
+   
 }else{
     echo "Error in Email sending";
+    $pdfm->Output($filename, 'I');
 }
-$pdfm->Output($filename, 'I');
+
 exit;
+
