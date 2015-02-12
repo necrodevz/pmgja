@@ -1,35 +1,36 @@
 <?php
 
-require 'Autoloader.php';
-require '_includes/header_alt.php';
+require_once 'Autoloader.php';
+include 'mpdf/mpdf.php';
 
 $pdfm =new mPDF();
 
+$fname = $_GET['fname'];
+$lname = $_GET['lname'];
+$email = $_GET['email'];
+$trn = $_GET['trn'];
+$land_num = $_GET['land_num'];
+$lime_num = $_GET['lime_num'];
+$digi_num = $_GET['digi_num'];
+$date = $_GET['date'];
+$add_line_one = $_GET['add_line_one'];
+$add_line_two = $_GET['add_line_two'];
+$add_parish = $_GET['add_parish'];
+$add_post_code = $_GET['add_post_code'];
+$comp = $_GET['comp'];
+$comp_occ = $_GET['comp_occ'];
+$comp_add_one = $_GET['comp_add_one'];
+$comp_add_two = $_GET['comp_add_two'];
+$comp_parish = $_GET['comp_parish'];
+$comp_post_code = null;
+$amount = $_GET['amount'];
+$bank = $_GET['bank'];
+$bank_branch = $_GET['bank_branch'];
+$bank_acc = $_GET['bank_acc'];
+
 ob_start();
 
-$fname = $_POST['fname'];
-$lname = $_POST['lname'];
-$email = $_POST['email'];
-$trn = $_POST['trn'];
-$land_num = $_POST['land_num'];
-$lime_num = $_POST['lime_num'];
-$digi_num = $_POST['digi_num'];
-$date = $_POST['date'];
-$add_line_one = $_POST['add_line_one'];
-$add_line_two = $_POST['add_line_two'];
-$add_parish = $_POST['add_parish'];
-$add_post_code = $_POST['add_post_code'];
-$comp = $_POST['comp'];
-$comp_occ = $_POST['com_occ'];
-$comp_add_one = $_POST['comp_add_one'];
-$comp_add_two = $_POST['comp_add_two'];
-$comp_parish = $_POST['comp_parish'];
-$comp_post_code = null;
-$amount = $_POST['amount'];
-$bank = $_POST['bank'];
-$bank_branch = $_POST['bank_branch'];
-$bank_acc = $_POST['bank_acc'];
-
+require '_includes/header_alt.php';
 echo '<h2>Please review your data and attach any supporting documents below,</h2>';
 echo 
 "<div class=\"container-fluid\">
@@ -153,6 +154,8 @@ echo "
             </div>
     </fieldset>";
 
+include '_includes/footer.php';
+
 $html = ob_get_contents();
 ob_end_clean();
 
@@ -161,7 +164,7 @@ $pdfm->WriteHTML(utf8_encode($html));
 $content_ = $pdfm->Output('', 'S');
 
 $content = chunk_split(base64_encode($content_));
-$mailto = 'feedback.pmg@gmail.com, necrodevz@gmail.com, '.$email; //Mailto here
+$mailto = 'feedback.pmg@gmail.com, '.$email; //Mailto here
 $from_name = $fname.' '.$lname; //Name of sender mail
 $from_mail = $email; //Mailfrom here
 $subject = 'PMG Loan Application-'.$fname.' '.$lname;
@@ -288,6 +291,3 @@ if($flgchk){
 }
 $pdfm->Output($filename, 'I');
 exit;
-
-
-include '_includes/footer.php';

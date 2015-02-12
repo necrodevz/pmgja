@@ -1,5 +1,5 @@
 <?php
-require 'Autoloader.php';
+require_once 'Autoloader.php';
 require '_includes/header.php';
 
 $fname = $_POST['fname'];
@@ -25,7 +25,7 @@ $bank = $_POST['bank'];
 $bank_branch = $_POST['bank_branch'];
 $bank_acc = $_POST['bank_acc'];
 
-
+/*
 $user = new User($fname, $lname, $email);
 $user->save();
 
@@ -36,8 +36,33 @@ $user_details = new User_Detail($trn, $add_line_one, $add_line_two, $add_parish,
 $user_details->save();
 $loan = new Loan($amount);
 $loan->save();
-
-$submit = 'confirm.php';
+*/
+$get_array = array(
+    'fname' => $fname,
+    'lname' => $lname,
+    'email' => $email,
+    'trn' => $trn,
+    'land_num' => $land_num,
+    'lime_num' => $lime_num,
+    'digi_num' => $digi_num,
+    'date' => $date,
+    'add_line_one' => $add_line_one,
+    'add_line_two' => $add_line_two,
+    'add_parish' => $add_parish,
+    'add_post_code' => $add_post_code,
+    'comp' => $comp,
+    'comp_occ' => $comp_occ,
+    'comp_add_one' => $comp_add_one,
+    'comp_add_two' => $comp_add_two,
+    'comp_parish' => $comp_parish,
+    'comp_post_code' => null,
+    'amount' => $amount,
+    'bank' => $bank,
+    'bank_branch' => $bank_branch,
+    'bank_acc' => $bank_acc
+        );
+$get_query = http_build_query($get_array);
+$submit = 'confirm.php?'. $get_query;
 echo '<h2>Please review your data and attach any supporting documents below,</h2>';
 echo 
 "<div class=\"container-fluid\">
