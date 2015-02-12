@@ -1,7 +1,6 @@
 <?php
 
 require_once 'Autoloader.php';
-include 'mpdf/mpdf.php';
 
 $pdfm =new mPDF();
 
@@ -287,10 +286,10 @@ $flgchk = mail($mailto,$subject,$header,$header2, "-r".$from_mail);
 if($flgchk){
    require '_includes/header.php'; ?>
 <div class="container-fluid">
-<div class="alert-success">
-    <h3>Your Application has been submitted!</h3>
+<div class="panel-success">
+    <h3 class="panel-title panel-heading">Your Application has been submitted!</h3>
     <br>
-    <blockquote class="panel">
+    <blockquote class="panel-body">
     <p>Your loan application has been submitted and a copy sent to the email address you provided.</p>
     <p>You will be contacted within 72 business hours.</p>
     </blockquote>

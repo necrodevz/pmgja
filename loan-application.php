@@ -48,7 +48,3 @@
   </div><!--end of #bottomBanner-->
   
   <?php include("_includes/footer.php"); ?> 
-</div><!--end of .gridContainer -->
-	<?php include("_includes/analyticstracking.php"); ?>
-</body>
-</html>

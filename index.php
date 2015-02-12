@@ -81,15 +81,9 @@
         <p>MON-FRI 09:00am to 05:00pm</p>
     </div><!--end of .holder-->
   </div><!--end of #bottomBanner-->
-  
+  <script src="_includes/slider.js"></script>
   <?php include("_includes/footer.php"); ?> 
-  
+ 
 
-</div><!--end of .gridContainer -->
 
-	<?php include("_includes/analyticstracking.php"); ?>
 
-<script src="_includes/slider.js"></script>
-
-</body>
-</html>

@@ -26,6 +26,7 @@
     </div><!--end of .holder-->
     
   </footer><!--end of footer-->
+  <?php include("_includes/analyticstracking.php"); ?>
   </div>
   </body>
   </html>
