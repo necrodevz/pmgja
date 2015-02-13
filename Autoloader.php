@@ -4,6 +4,6 @@
 
 spl_autoload_register(function ($class) {
     include_once '_includes/classes/' . $class . '.php';
-    include_once 'mpdf/'.$class.'.php';
-    include_once 'PHPMailer/'.$class.'.php';
+    include_once 'mpdf/mpdf.php';
+    //include_once 'PHPMailer/'.$class.'.php';
 });
