@@ -1,7 +1,7 @@
 <?php
 
 require_once 'Autoloader.php';
-
+error_reporting(-1);
 $pdfm =new mPDF();
 
 $fname = $_GET['fname'];
