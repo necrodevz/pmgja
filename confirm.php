@@ -301,7 +301,7 @@ if($flgchk){
    
 }else{
     echo "Error in Email sending";
-    $pdfm->Output($filename, 'I');
+    //$pdfm->Output($filename, 'I');
 }
 
 exit;
