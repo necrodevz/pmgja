@@ -9,6 +9,8 @@
             <file>file:/var/www/html/sites/projects/pmg/submitted.php</file>
             <file>file:/var/www/html/sites/projects/pmg/confirm.php</file>
         </group>
-        <group/>
+        <group>
+            <file>file:/var/www/projects/pmgja/apply_now.php</file>
+        </group>
     </open-files>
 </project-private>
