@@ -3,7 +3,7 @@
 $submit = 'submitted.php';
 echo "<div class=\"container-fluid\">";
 echo "<form action=\"$submit\" method=\"post\" enctype=\"multipart/form-data\" autocomplete>
-    <fieldset id=\"section1\" style=\"width:100%;\">
+    <fieldset id=\"section1\" style=\"width:100%; margin-top: 180px;\">
         <legend>Section 1: Personal Information</legend>
         <div class=\"row-fluid\">
             <div class=\"form-group\">
